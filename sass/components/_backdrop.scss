@@ -1,0 +1,21 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: scroll;
+
+  opacity: 1;
+  transition: opacity $transitionDuration $transitionTimingFunction,
+    visibility $transitionDuration $transitionTimingFunction;
+
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
